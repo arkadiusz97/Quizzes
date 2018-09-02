@@ -19,7 +19,7 @@ MainWindow::MainWindow(QWidget *parent) :
     resetKey = new QShortcut(Qt::Key_R, this);
     skippKey = new QShortcut(Qt::Key_S, this);
     openKey = new QShortcut(Qt::CTRL + Qt::Key_O, this);
-    connect(openKey, QShortcut::activated, this, &MainWindow::loadQuiz);
+    connect(openKey, &QShortcut::activated, this, &MainWindow::loadQuiz);
 }
 
 MainWindow::~MainWindow()
