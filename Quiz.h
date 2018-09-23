@@ -2,7 +2,9 @@
 #include <QTextStream>
 #include <QVector>
 #include <QString>
-#include <QRegularExpression>
+#include <QJsonObject>
+#include <QJsonDocument>
+#include <QJsonArray>
 #include <QDateTime>
 #include <QRandomGenerator>
 #include <QFileInfo>

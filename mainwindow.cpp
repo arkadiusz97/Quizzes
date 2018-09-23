@@ -9,6 +9,7 @@ MainWindow::MainWindow(QWidget *parent) :
     this->setFixedSize(this->width(), this->height());
     connect(ui->actionLoadQuiz, SIGNAL(triggered(bool)), this, SLOT(loadQuiz()));
     connect(ui->actionAbout, SIGNAL(triggered(bool)), this, SLOT(showAboutWindow()));
+    connect(ui->actionQuizzes_Editor, SIGNAL(triggered(bool)), this, SLOT(openQuizzesEditor()));
     connect(&quiz, &Quiz::answers, this, &MainWindow::updateResult);
 
     answerAKey = new QShortcut(Qt::Key_A, this);
@@ -261,4 +262,9 @@ void MainWindow::setAnswerButtonsEnabled(bool status)
     ui->answerBButton->setEnabled(status);
     ui->answerCButton->setEnabled(status);
     ui->answerDButton->setEnabled(status);
+}
+
+void MainWindow::openQuizzesEditor()
+{
+    editor.show();
 }

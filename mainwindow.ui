@@ -375,6 +375,7 @@
      <string>menu</string>
     </property>
     <addaction name="actionLoadQuiz"/>
+    <addaction name="actionQuizzes_Editor"/>
     <addaction name="separator"/>
     <addaction name="actionAbout"/>
    </widget>
@@ -396,6 +397,11 @@
   <action name="actionAbout">
    <property name="text">
     <string>About</string>
+   </property>
+  </action>
+  <action name="actionQuizzes_Editor">
+   <property name="text">
+    <string>Quizzes Editor</string>
    </property>
   </action>
  </widget>

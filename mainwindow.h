@@ -6,6 +6,7 @@
 #include <QMessageBox>
 #include <QShortcut>
 #include "Quiz.h"
+#include "quizzeseditor.h"
 
 namespace Ui {
 class MainWindow;
@@ -51,11 +52,14 @@ private slots:
     void blockAnswerButtonsSignals(bool status);
 
     void setAnswerButtonsEnabled(bool status);
+
+    void openQuizzesEditor();
 private:
     Ui::MainWindow *ui;
     Quiz quiz;
     QString quizFile;
     QShortcut *answerAKey, *answerBKey, *answerCKey, *answerDKey, *nextKey, *skippKey, *resetKey, *openKey;
+    QuizzesEditor editor;
 };
 
 #endif // MAINWINDOW_H

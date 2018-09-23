@@ -8,7 +8,6 @@ Quiz::Quiz() : good(0), wrong(0), skipped(0), numberOfAllQuestions(0)
 bool Quiz::loadQuiz(QString fileName)
 {
     questions.clear();
-    QRegularExpression re("(.*);(.*);(.*);(.*);(.*);(.*);(.*)");
     QFile file(fileName);
     if(!file.exists())
     {
@@ -17,17 +16,19 @@ bool Quiz::loadQuiz(QString fileName)
     file.open(QIODevice::ReadOnly);
     QFileInfo info(file);
     quizPath = info.absolutePath();
-    QTextStream stream(&file);
-    while(!stream.atEnd())
-    {
-        QString line = stream.readLine();
-        auto match = re.match(line);
-        if(match.hasMatch())
-        {
-            questions.push_back(Question(match.captured(1), match.captured(2), match.captured(3).toUpper(), match.captured(4), match.captured(5), match.captured(6), match.captured(7)));
-        }
-    }
+    QByteArray fileContent = file.readAll();
     file.close();
+    QJsonArray jsonQuestions = QJsonDocument::fromJson(fileContent).array();
+    for(auto i : jsonQuestions)
+    {
+        questions.push_back(Question(i.toObject()["image"].toString(),
+        i.toObject()["question"].toString(),
+        i.toObject()["Valid answer"].toString(),
+        i.toObject()["answer A"].toString(),
+        i.toObject()["answer B"].toString(),
+        i.toObject()["answer C"].toString(),
+        i.toObject()["answer D"].toString()));
+    }
     currentFileName = fileName;
     numberOfAllQuestions = questions.size();
     return 0;

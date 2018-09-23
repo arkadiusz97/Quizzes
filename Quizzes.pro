@@ -27,12 +27,19 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     Question.cpp \
-    Quiz.cpp
+    Quiz.cpp \
+    quizzeseditor.cpp \
+    quizzeseditorbackend.cpp \
+    qComboBoxDelegate.cpp
 
 HEADERS += \
         mainwindow.h \
     Question.h \
-    Quiz.h
+    Quiz.h \
+    quizzeseditor.h \
+    quizzeseditorbackend.h \
+    qComboBoxDelegate.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    quizzeseditor.ui
