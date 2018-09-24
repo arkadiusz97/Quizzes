@@ -101,10 +101,6 @@ void QuizzesEditor::open(QString fileName)
     {
         return;
     }
-    /*for(auto i : rowItems) ---PROBLEM---
-    {
-        delete [] i;
-    }*/
     ui->questionsTableView->setEnabled(true);
     setWindowTitle("Quizzes Editor - " + fileName);
     isModified = false;
@@ -114,7 +110,7 @@ void QuizzesEditor::open(QString fileName)
     QString columnsNames[] = {"image", "question", "Valid answer", "answer A", "answer B", "answer C", "answer D"};
     for(auto i : quizToEdit)
     {
-        rowItems.push_back(new QStandardItem[7]);//To do.
+        rowItems.push_back(new QStandardItem[7]);
         for(int j=0; j<7; ++j)
         {
             rowItems[rowItems.size()-1][j].setText(i.toObject()[columnsNames[j]].toString());
