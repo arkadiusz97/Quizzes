@@ -6,7 +6,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    //this->setFixedSize(this->width(), this->height());
     ui->verticalLayoutAnswerLabels->
     connect(ui->actionLoadQuiz, SIGNAL(triggered(bool)), this, SLOT(loadQuiz()));
     connect(ui->actionAbout, SIGNAL(triggered(bool)), this, SLOT(showAboutWindow()));
