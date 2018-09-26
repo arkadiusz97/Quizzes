@@ -5,7 +5,8 @@ Using this program you can create and solve quizzes with questions contains from
 Quizzes show amount of good, wrong and skipped answers.
 
 # Requirements.
-To build and run this program, you need a libary Qt 5.11 and operating system Windows 7/8/10 or GNU/Linux. Program was tested under MinGW compiler on Windows and under GCC 64-bit on Linux(Ubuntu 18.04.1 LTS).
+To build and run this program, you need a libary Qt 5.11 and operating system Windows 7/8/10 or GNU/Linux. 
+Program was tested under MinGW compiler on Windows and under GCC 64-bit on Linux(Ubuntu 18.04.1 LTS).
 
 # Quizzes Editor.
 If you want create or edit quiz, you can use Quizzes Editor. If you want create question with image, you have to use image with resolution 771 x 331.
