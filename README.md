@@ -19,4 +19,3 @@ Then remember to don't makr answer D as good in editor.
 
 # Screenshots
 ![Quizzes](https://raw.githubusercontent.com/arkadiusz97/Quizzes/master/screenshots/Quizzes.png)
-![Editor](https://raw.githubusercontent.com/arkadiusz97/Quizzes/master/screenshots/Editor.png)
