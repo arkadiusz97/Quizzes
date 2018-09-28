@@ -20,3 +20,6 @@ Then remember to don't makr answer D as good in editor.
 # Screenshots
 ![Quizzes](https://raw.githubusercontent.com/arkadiusz97/Quizzes/master/screenshots/Quizzes.png)
 ![Editor](https://raw.githubusercontent.com/arkadiusz97/Quizzes/master/screenshots/Editor.png)
+
+# Download
+Download the newest version for Microsoft Windows 7, 8 and 10: https://github.com/arkadiusz97/Quizzes/releases/download/1.0/Quizzes.zip
