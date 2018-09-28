@@ -16,3 +16,7 @@ When you create question with 2 answers, leave fields "answers c(optional)" and 
 Then remember to don't makr answer C or D as good in editor.
 Also you have to leave field "answers d(optional)" empty, if you want create question with 3 answer.
 Then remember to don't makr answer D as good in editor.
+
+# Screenshots
+![Quizzes](https://raw.githubusercontent.com/arkadiusz97/Quizzes/master/screenshots/Quizzes.png)
+![Editor](https://raw.githubusercontent.com/arkadiusz97/Quizzes/master/screenshots/Editor.png)
